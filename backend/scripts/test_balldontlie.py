@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_KEY = os.getenv("78904aa7-af7c-4f9c-9411-3e632bfa58a7")
+API_KEY = os.getenv("BALLDONTLIE_API_KEY")
 
 headers = {
     "Authorization": API_KEY
