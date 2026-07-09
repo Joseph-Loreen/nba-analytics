@@ -10,10 +10,7 @@ router = APIRouter()
 def list_players(search: str | None = Query(None), db: Session = Depends(get_db)):
     query = db.query(Player)
     if search:
-        query = query.filter(
-            (Player.first_name.ilike(f"%{search}%")) |
-            (Player.last_name.ilike(f"%{search}%"))
-        )
+        query = query.filter((Player.first_name.ilike(f"%{search}%")) |(Player.last_name.ilike(f"%{search}%")))
     return query.limit(50).all()
 
 

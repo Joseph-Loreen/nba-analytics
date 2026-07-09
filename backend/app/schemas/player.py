@@ -1,9 +1,10 @@
 from pydantic import BaseModel
+from app.schemas.team import TeamBasic
 
-class TeamBasic(BaseModel):
+class PlayerBasic(BaseModel):
     id: int
-    name: str
-    abbreviation: str
+    first_name: str
+    last_name: str
 
     class Config:
         from_attributes = True
